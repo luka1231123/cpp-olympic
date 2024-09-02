@@ -1,49 +1,55 @@
-//made by Luka Rekhviashvili//
 #include <iostream>
 #include <vector>
+#include <algorithm>
 #include <string>
-#include <fstream>
 #include <queue>
 
 using namespace std;
 
-#define YES cout << "YES" << endl;
-#define NO cout << "NO" << endl;
-#define Yes cout << "Yes" << endl;
-#define No cout << "No" << endl;
-#define yes cout << "yes" << endl;
-#define no cout << "no" << endl;
-#define For(in, n) for (int i = in; i < n; i++)
-#define ForE(in, n) for (int i = in; i <= n; i++)
-#define rFor(in, n) for (int i = n - 1; i >= in; i--)
-#define Scan_Vector(v) for (auto &i : v) cin >> i;
-#define Print_Vector(v) for (auto &i : v) cout << i << " ";
-#define PrintVector(V) for(auto &elem : V) cout << elem << " "; cout << endl;
-#define PrintlnVector(V) for(auto &elem : V) cout << elem << endl;
-#define PrintMatrix(M) for(auto &V : M) { for(auto &elem : V) cout << elem << " "; cout << endl; }
-#define PrintYesNo(b) if(b) Print("YES") else Print("NO");
-#define PrintEnd(s) cout << s << endl;
-#define Print(s) cout << s << " ";
-#define Reverse(v) reverse(v.begin(), v.end())
-#define ScanVector(V) for(auto &elem : V) cin >> elem;
-#define Sort(v) sort(v.begin(), v.end());
+// Simplified macros for common outputs
+#define PRINT_YES cout << "YES" << endl;
+#define PRINT_NO cout << "NO" << endl;
+#define PRINT_YES_NO(cond) cout << (cond ? "YES" : "NO") << endl;
+#define PRINT(s) cout << s << " ";
+#define PRINTLN(s) cout << s << endl;
 
+// For loop macros
+#define FOR(i, start, end) for (int i = start; i < end; ++i)
+#define FOR_INC(i, start, end) for (int i = start; i <= end; ++i)
+#define FOR_DEC(i, start, end) for (int i = start; i >= end; --i)
+
+// Vector utilities
+#define SCAN_VECTOR(v) for (auto &i : v) cin >> i;
+#define PRINT_VECTOR(v) for (const auto &i : v) cout << i << " "; cout << endl;
+#define PRINTLN_VECTOR(v) for (const auto &i : v) cout << i << endl;
+#define REVERSE_VECTOR(v) reverse(v.begin(), v.end());
+#define SORT_VECTOR(v) sort(v.begin(), v.end());
+
+// Matrix utilities
+#define PRINT_MATRIX(m) for (const auto &row : m) { PRINT_VECTOR(row); }
+
+// Binary Tree Node structure
 struct Node {
-	int val;
-	struct Node* left, * right;
-	Node(int val) {
-		this->val = val;
-		left = right = NULL;
-	}
+    int val;
+    Node* left;
+    Node* right;
+    Node(int val) : val(val), left(nullptr), right(nullptr) {}
 };
 
 int solution() {
-	return 0;
+    return 0;
 }
 
 int main() {
-	int x = 5;
+    int x = 5;
+    cout << &x << endl;
 
-	cout << &x;
+    vector<int> vec = {1, 2, 3, 4, 5};
+    PRINT_VECTOR(vec);
+    REVERSE_VECTOR(vec);
+    PRINT_VECTOR(vec);
+    SORT_VECTOR(vec);
+    PRINT_VECTOR(vec);
+
+    return 0;
 }
-
